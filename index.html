@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   <header class="header">
+    <div class="header__container">
+
+      <!-- Accessibility: Skip navigation -->
+      <a href="#main-content" class="skip-link">
+        Skip to content
+      </a>
+
+      <!-- Placeholder logo -->
+      <a href="/" class="logo" aria-label="Homepage">
+        <img
+     src="src/img/Trello_attribution_center_light.png"
+      alt="Home"
+     width="160"
+      height="48"
+  >
+      </a>
+
+      <!-- Navigation and signup -->
+      <div class="header__links" id="primary-navigation">
+
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list">
+
+            <li>
+              <a href="#features" class="nav__link">
+                Features
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+                 <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#solutions" class="nav__link">
+                Solutions
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+                 <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#plans" class="nav__link">
+                Plans
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+                 <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#pricing" class="nav__link">
+                Pricing
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+                 <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#resources" class="nav__link">
+                Resources
+                <i data-lucide="chevron-down" aria-hidden="true"></i>
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+        
+        <div  class="signup-link">
+           <a href="#signup">Get Trello for free</a>
+        </div>
+        <div  class="signup-link">
+           <a href="#signup">Log in</a>
+        </div>
+
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <button
+        class="menu-toggle menu-remove"
+        type="button"
+        aria-label="Close navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+
+    </div>
+  </header>
+    <script type="module" src="src/js/controller.js"></script>
+</body>
+</html>
