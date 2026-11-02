@@ -143,7 +143,15 @@ body {
 .nav__link [data-lucide="chevron-right"]{
     display: none;
 }
-
+.nav__link{
+  display: none;
+}
+.nav-btn{ 
+  display: inline-flex;
+  border: none;
+  outline: none;
+  background-color: var(--color-white);
+}
 /* Signup */
 
 .signup-link {
@@ -261,6 +269,7 @@ body {
   }
 
   .nav__link {
+    display: inline-flex;
     justify-content: space-between;
     width: 100%;
     border-bottom: 1px solid grey;
@@ -272,7 +281,9 @@ body {
   .nav__link [data-lucide="chevron-right"]{
     display: inline;
   }
-
+ .nav-btn{
+  display: none;
+ }
   .signup-link {
     margin-left: 0;
     display: flex;
