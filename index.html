@@ -190,10 +190,34 @@
     <div class="hero-image">
       <img
         src="/src/img/herotrello.jpeg"
-        alt="Trello workspace displaying organized tasks and projects"
+        alt=" "
       />
     </div>
   </div>
+  
+<!-- Video Modal -->
+<div class="video-overlay hidden" inert>
+  <div
+    class="video-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="How to use trello"
+  >
+    <button
+      class="video-close"
+      type="button"
+      aria-label="Close video"
+    >
+      <i data-lucide="x"></i>
+    </button>
+
+    <video class="video-modal-video" controls playsinline>
+      <source src="src/img/trello tut.mp4" type="video/mp4" />
+      Your browser does not support HTML video.
+    </video>
+  </div>
+</div>
+
 </section>
 
   </main>
