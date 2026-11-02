@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/hero.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -133,6 +134,70 @@
 
     </div>
   </header>
+  <main>
+    <section class="hero-announcement">
+  <p>
+    Accelerate your team's work with AI features, now available for all
+    Premium and Enterprise.
+  </p>
+</section>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <!-- Left column -->
+    <div class="hero-text">
+      <h1 class="center">
+        Capture, organize, and tackle your to-dos from anywhere.
+      </h1>
+
+      <p class="hero-description center">
+        Escape the clutter and chaos. Unleash your productivity
+        with Trello.
+      </p>
+
+      <form class="signup-form">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          aria-label="Email address"
+          required
+        />
+
+        <button type="submit" class="signup-btn">
+          Sign up. It's free.
+        </button>
+      </form>
+       <a class="signup-btn sign-link">
+          Sign up. It's free.
+       </a>
+      <p class="privacy-notice center">
+        By entering my email, I acknowledge the
+        <a href="https://www.atlassian.com/legal/privacy-policy">
+          Atlassian Privacy Policy.
+        </a>
+      </p>
+
+      <button type="button" class="video-btn">
+        <span>Watch Video</span>
+        <span class="play-icon" aria-hidden="true">
+          <i data-lucide="play"></i>
+        </span>
+      </button>
+    </div>
+
+    <!-- Right column -->
+    <div class="hero-image">
+      <img
+        src="/src/img/herotrello.jpeg"
+        alt="Trello workspace displaying organized tasks and projects"
+      />
+    </div>
+  </div>
+</section>
+
+  </main>
+
     <script type="module" src="src/js/controller.js"></script>
 </body>
 </html>

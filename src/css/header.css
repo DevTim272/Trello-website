@@ -54,6 +54,7 @@ body {
 .header {
   background-color: var(--color-white);
   width: 100%;
+ 
 }
 
 .header__container {
@@ -61,6 +62,12 @@ body {
   align-items: center;
   padding: var(--header-padding);
   gap: var(--header-gap);
+   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-white);
 }
 
 /* Accessibility */
@@ -122,7 +129,7 @@ body {
   align-items: center;
   gap: 0.35rem;
   color: var(--color-navy);
-  font-size: var(--font-size-nav);
+  font-size: 1.1rem;
   font-weight: var(--font-weight-nav);
   line-height: var(--line-height-nav);
   letter-spacing: var(--letter-spacing-nav);
@@ -132,7 +139,7 @@ body {
 
 .nav__link:hover,
 .signup-link:hover {
-  color: #526a91;
+  color: var(--sign-link);
 }
 
 .nav__link svg {
@@ -223,6 +230,7 @@ body {
 
   .header__container {
     justify-content: space-between;
+    position: static;
   }
 
   .menu-toggle {

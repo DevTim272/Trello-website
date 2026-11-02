@@ -1,0 +1,250 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-navy: #172b4d;
+  --color-hover: #f1f2f4;
+  --sign-link: #0052CC;
+
+  /* Typography */
+  --font-primary: "Victoria", Arial, sans-serif;
+  --font-size-nav: 1.2rem;
+  --font-weight-nav: 500;
+  --line-height-nav: 1.5rem;
+  --letter-spacing-nav: normal;
+
+  /* Spacing */
+  --header-padding: 1.25rem 2rem;
+  --nav-gap: 1.5rem;
+  --header-gap: 2.5rem;
+
+  /* Other */
+  --transition: 0.2s ease;
+}
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+
+main{
+    position: relative;
+    top: 4.5rem;
+}
+.hero-announcement {
+  width: 100%;
+  padding: 1.5rem 1rem 2rem;
+  background-color: #e9e8ff;
+  text-align: center;
+}
+
+.hero-announcement p {
+  width: 100%;
+  max-width: clamp(20rem, 100vw, 100%);
+  margin-inline: auto;
+  font-size: clamp(0.975rem, 1.2vw, 1.1rem);
+  font-family: var(--font-primary);
+  letter-spacing: 0.2;
+  line-height: 1.5;
+  color: var(--color-navy);
+}
+.sign-link{
+  display: none;
+}
+
+
+
+/* Mobile */
+@media (max-width: 900px) {
+  main{
+    position: relative;
+    top: 1.5rem;
+}
+  .hero-announcement {
+    padding-top: 1rem;
+    padding-bottom: 1.75rem;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  padding: 4rem 5%;
+}
+
+.hero-content {
+  max-width: 1400px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Left Column */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  color: var(--color-navy);
+}
+
+.hero-text h1 {
+  max-width: 650px;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0.02rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+/* Signup Form */
+.signup-form {
+  display: flex;
+  width: 100%;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.signup-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid #8590a2;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.signup-btn {
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #579dff;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.signup-btn:hover {
+  background-color: #388bff;
+}
+
+/* Privacy Notice */
+.privacy-notice {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 1.5rem 1.5rem;
+  
+}
+
+.privacy-notice a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Watch Video */
+.video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.play-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+/* Right Column */
+.hero-image {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main{
+    position: relative;
+    top: 1.5rem;
+}
+  .hero-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+  }
+
+  .signup-form {
+    flex-direction: column;
+    display: none;
+  }
+  .sign-link{ 
+    display: inline-block ;
+  }
+
+  .signup-form input,
+  .signup-btn {
+    width: 100%;
+    min-height: 3.25rem;
+  }
+  .center{
+    text-align: center;
+    width: 100%;
+  }
+  .video-btn{
+    text-align: center;
+    align-self: center;
+
+  }
+}
+
