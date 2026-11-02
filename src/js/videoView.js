@@ -18,6 +18,7 @@ class VideoView {
     }
     addHandlerCloseVideo(handler){
         this._closeBtn.addEventListener('click', handler)
+        this._parentElement.addEventListener('click', handler)
     }
 
 }

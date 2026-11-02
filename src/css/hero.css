@@ -4,6 +4,7 @@
   --color-navy: #172b4d;
   --color-hover: #f1f2f4;
   --sign-link: #0052CC;
+  --color-pale: #F4F5F7;
 
   /* Typography */
   --font-primary: "Victoria", Arial, sans-serif;
@@ -43,7 +44,7 @@ main{
 .hero-announcement {
   width: 100%;
   padding: 1.5rem 1rem 2rem;
-  background-color: #e9e8ff;
+  background-color: #DEEBFF;
   text-align: center;
 }
 
@@ -79,6 +80,7 @@ main{
 .hero-section {
   width: 100%;
   padding: 4rem 5%;
+  background-color: var(--color-pale);
 }
 
 .hero-content {
