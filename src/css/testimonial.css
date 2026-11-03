@@ -1,36 +1,36 @@
 
-/* =========================================
-   TESTIMONIAL SECTION
-========================================= */
+
 
 :root {
   --testimonial-text: #091e42;
   --testimonial-blue: #0c4da2;
   --testimonial-link: #0052cc;
   --testimonial-border: #dfe1e6;
-  --testimonial-shadow: 0 0.2rem 0.4rem
-    rgba(9, 30, 66, 0.16);
+
+  --testimonial-shadow:
+    0 0.2rem 0.4rem rgba(9, 30, 66, 0.16);
 
   --testimonial-max-width: 68.5rem;
 }
 
+
+
 .testimonial-section {
   width: 100%;
   padding: 2rem 5% 4rem;
-  background-color: #fff;
+  background: #fff;
   color: var(--testimonial-text);
 }
 
 .testimonial-section__container {
+  position: relative;
   width: 100%;
   max-width: var(--testimonial-max-width);
   margin-inline: auto;
 }
 
 
-/* =========================================
-   NAVIGATION INDICATORS
-========================================= */
+
 
 .testimonial-nav {
   display: flex;
@@ -41,55 +41,69 @@
   margin-bottom: 1.5rem;
 }
 
-.testimonial-nav__dots,
-.testimonial-nav__arrows {
+.testimonial-nav__dots {
   display: flex;
   align-items: center;
-}
-
-.testimonial-nav__dots {
   gap: 0.5rem;
 }
 
 .testimonial-nav__dots span {
   width: 0.5rem;
-  height: 0.5rem;
-
+  aspect-ratio: 1;
   border-radius: 50%;
-  background-color: var(--testimonial-text);
+  background: var(--testimonial-text);
 }
 
 .testimonial-nav__arrows {
+  display: flex;
+  align-items: center;
   gap: 1.5rem;
-  margin-left: 0.5rem;
 }
 
 .testimonial-nav__arrow {
   width: 2rem;
-  height: 2rem;
+  aspect-ratio: 1;
 
   display: grid;
   place-items: center;
 
   border-radius: 50%;
-  background-color: #f1f2f4;
+  background: #f1f2f4;
   color: #8590a2;
 
   font-size: 1.8rem;
-  font-weight: 400;
   line-height: 1;
 }
 
 
-/* =========================================
-   MAIN TESTIMONIAL CARD
-========================================= */
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+
+
+.testimonial-carousel__track {
+  display: flex;
+  width: 100%;
+
+  transform: translateX(0);
+
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+
 
 .testimonial-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  width: 100%;
+
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 
-  width: 100%;
   min-height: 29rem;
 
   overflow: hidden;
@@ -97,14 +111,11 @@
   border: 1px solid var(--testimonial-border);
   border-radius: 0.65rem;
 
-  background-color: #fff;
+  background: #fff;
   box-shadow: var(--testimonial-shadow);
 }
 
 
-/* =========================================
-   LEFT PANEL
-========================================= */
 
 .testimonial-card__main {
   min-width: 0;
@@ -127,9 +138,7 @@
 }
 
 
-/* =========================================
-   AUTHOR INFORMATION
-========================================= */
+
 
 .testimonial-card__footer {
   display: flex;
@@ -152,13 +161,12 @@
 
   margin-bottom: 1rem;
 
-  background-color: var(--testimonial-text);
+  background: var(--testimonial-text);
 }
 
 .testimonial-card__name,
 .testimonial-card__role {
   margin: 0;
-
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -169,11 +177,9 @@
 
 .testimonial-card__role {
   max-width: 24rem;
-  font-weight: 400;
 }
 
 
-/* Women Who Code Wordmark */
 
 .testimonial-card__brand {
   display: flex;
@@ -181,8 +187,8 @@
   align-items: flex-start;
 
   margin-top: 1.5rem;
-
   line-height: 1;
+
   color: var(--testimonial-text);
 }
 
@@ -199,11 +205,10 @@
 }
 
 
-/* Read Story Link */
+
 
 .testimonial-card__link {
   flex-shrink: 0;
-
   margin-bottom: 0.2rem;
 
   color: var(--testimonial-link);
@@ -222,10 +227,6 @@
 }
 
 
-/* =========================================
-   RIGHT PANEL: STATISTICS
-========================================= */
-
 .testimonial-card__statistics {
   min-width: 0;
 
@@ -235,7 +236,7 @@
 
   padding: 2.5rem 2rem;
 
-  background-color: var(--testimonial-blue);
+  background: var(--testimonial-blue);
   color: #fff;
 }
 
@@ -252,14 +253,151 @@
   margin: 2rem 0 0;
 
   font-size: 0.95rem;
-  font-weight: 400;
   line-height: 1.5;
 }
 
 
-/* =========================================
-   TABLET RESPONSIVENESS
-========================================= */
+
+
+.testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+.testimonial-carousel__track {
+  display: flex;
+  width: 100%;
+
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.testimonial-carousel__track .testimonial-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+
+
+
+.testimonial-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-nav__dots,
+.testimonial-nav__arrows {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-nav__dots {
+  gap: 0.6rem;
+}
+
+.testimonial-nav__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #c1c7d0;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.testimonial-nav__dot[aria-current="true"] {
+  background: #091e42;
+}
+
+.testimonial-nav__arrows {
+  gap: 1rem;
+}
+
+.testimonial-nav__arrow {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f1f2f4;
+  color: #42526e;
+
+  font-size: 1.8rem;
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.testimonial-nav__arrow:hover {
+  background: #dfe1e6;
+  color: #091e42;
+}
+
+
+
+.testimonial-nav button:focus-visible {
+  outline: 3px solid #0c66e4;
+  outline-offset: 3px;
+}
+
+
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+
+
+@media (max-width: 48rem) {
+  .testimonial-nav {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-nav__arrow {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-carousel__track,
+  .testimonial-nav__dot,
+  .testimonial-nav__arrow {
+    transition: none;
+    will-change: auto;
+  }
+}
+
 
 @media (max-width: 64rem) {
 
@@ -283,7 +421,7 @@
 
 
 /* =========================================
-   MOBILE RESPONSIVENESS
+   MOBILE
 ========================================= */
 
 @media (max-width: 48rem) {
@@ -372,13 +510,15 @@
 
 
 /* =========================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .testimonial-card__link {
+  .testimonial-carousel__track {
     transition: none;
+    will-change: auto;
   }
 
 }
+
