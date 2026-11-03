@@ -1,27 +1,46 @@
 :root {
-  /* Colors */
+  
   --feature-text: #091e42;
   --feature-background: #ffffff;
   --feature-card-background: #f1f1f1;
   --feature-preview-background: #f1f2f4;
   --feature-accent: #00c7d9;
-
-  /* Typography */
-  --feature-font: inherit;
-
-  /* Layout */
   --feature-max-width: 70rem;
   --feature-column-gap: 2rem;
 
-  /* Effects */
+  
   --feature-card-shadow:
     0 0.5rem 1.25rem rgba(9, 30, 66, 0.13);
+}
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-navy: #172b4d;
+  --color-hover: #f1f2f4;
+  --sign-link: #0052CC;
+  --color-pale: #F4F5F7;
+
+  /* Typography */
+  --font-primary: "Victoria", Arial, sans-serif;
+  --font-size-nav: 1.2rem;
+  --font-weight-nav: 500;
+  --line-height-nav: 1.5rem;
+  --letter-spacing-nav: normal;
+
+  /* Spacing */
+  --header-padding: 1.25rem 2rem;
+  --nav-gap: 1.5rem;
+  --header-gap: 2.5rem;
+
+  /* Other */
+  --transition: 0.2s ease;
 }
 /* Trello Intro Section */
 .trello-intro {
   width: 100%;
   padding: 1rem 5%;
   color: var(--feature-text);
+  font-family: var(--font-primary);
 }
 
 .trello-intro__content {
@@ -69,23 +88,13 @@
   }
 }
 
-/* =========================================
-   FEATURE SHOWCASE
-========================================= */
-
-
-
-
-/* =========================================
-   SECTION CONTAINER
-========================================= */
 
 .feature-showcase {
-  width: 100%;
+  
   padding: 3.5rem 5%;
   background-color: var(--feature-background);
   color: var(--feature-text);
-  font-family: var(--feature-font);
+  font-family: var(--font-primary);
 }
 
 .feature-showcase__container {
@@ -103,9 +112,7 @@
 }
 
 
-/* =========================================
-   LEFT COLUMN: FEATURE LIST
-========================================= */
+
 
 .feature-showcase__list {
   display: flex;
@@ -115,7 +122,7 @@
 }
 
 
-/* Individual feature cards */
+
 
 .feature-card {
   padding: 1.1rem 1.2rem;
@@ -130,7 +137,7 @@
 }
 
 
-/* Active feature */
+
 
 .feature-card--active {
   background-color: var(--feature-card-background);
@@ -151,7 +158,6 @@
 }
 
 
-/* Feature descriptions */
 
 .feature-card__description {
   margin: 0;
@@ -164,9 +170,6 @@
 }
 
 
-/* =========================================
-   RIGHT COLUMN: PRODUCT PREVIEW
-========================================= */
 
 .feature-showcase__preview {
   position: relative;
@@ -175,7 +178,6 @@
 }
 
 
-/* Three decorative dots */
 
 .feature-showcase__dots {
   position: absolute;
@@ -195,7 +197,7 @@
 }
 
 
-/* Image background */
+
 
 .feature-showcase__image-wrapper {
   width: 100%;
@@ -210,7 +212,6 @@
 }
 
 
-/* Product image */
 
 .feature-showcase__image {
   display: block;
@@ -221,9 +222,187 @@
   object-fit: contain;
   object-position: center;
 }
+
+
+
+:root {
+  --message-bg: #076b9c;
+  --message-text: #e6f2ff;
+  --message-image-shadow:
+    0 0.5rem 1.5rem rgba(16, 56, 126, 0.15);
+}
+
+/* Main Section */
+
+.message-feature {
+  width: 100%;
+  margin-bottom: 9rem;
+  padding: 5rem 5% 0;
+
+  background-color: var(--message-bg);
+  color: var(--message-text);
+  overflow: visible;
+}
+
+/* Inner Container */
+
+.message-feature__container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* =========================================
-   TABLET
+   SECTION INTRODUCTION
 ========================================= */
+
+.message-feature__intro {
+  width: 100%;
+  max-width: 48rem;
+  margin-bottom: 3rem;
+
+  text-align: center;
+}
+
+.message-feature__intro h2 {
+  margin: 0 0 1rem;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.message-feature__intro p {
+  margin: 0;
+
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =========================================
+   PRODUCT VISUALS
+========================================= */
+
+.message-feature__visuals {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2.5rem;
+}
+
+/* Individual Images */
+
+.message-feature__image {
+  width: 60%;
+  overflow: hidden;
+
+  border-radius: 0.65rem;
+  box-shadow: var(--message-image-shadow);
+  background-color: #ffffff;
+}
+
+.message-feature__image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Primary Image */
+
+.message-feature__image--primary {
+  position: relative;
+  z-index: 1;
+}
+
+/* Secondary Image */
+
+.message-feature__image--secondary {
+  position: relative;
+  z-index: 2;
+
+  transform: translateY(20%);
+}
+
+/* =========================================
+   MOBILE AND TABLET
+========================================= */
+
+@media (max-width: 48rem) {
+
+  .message-feature {
+    padding: 3.5rem 1.25rem 0;
+    margin-bottom: 7rem;
+  }
+
+  .message-feature__intro {
+    margin-bottom: 2rem;
+  }
+
+  .message-feature__intro h2 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .message-feature__visuals {
+    gap: 1.75rem;
+  }
+
+  .message-feature__image {
+    width: 80%;
+    border-radius: 0.5rem;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 30rem) {
+
+  .message-feature {
+    padding: 2.75rem 1rem 0;
+    margin-bottom: 5rem;
+  }
+
+  .message-feature__intro {
+    margin-bottom: 1.75rem;
+  }
+
+  .message-feature__visuals {
+    gap: 1.5rem;
+  }
+
+  .message-feature__image {
+    width: 100%;
+  }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .message-feature__image {
+    scroll-behavior: auto;
+  }
+
+}
+
 
 @media (max-width: 64rem) {
 

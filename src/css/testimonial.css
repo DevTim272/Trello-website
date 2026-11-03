@@ -1,0 +1,384 @@
+
+/* =========================================
+   TESTIMONIAL SECTION
+========================================= */
+
+:root {
+  --testimonial-text: #091e42;
+  --testimonial-blue: #0c4da2;
+  --testimonial-link: #0052cc;
+  --testimonial-border: #dfe1e6;
+  --testimonial-shadow: 0 0.2rem 0.4rem
+    rgba(9, 30, 66, 0.16);
+
+  --testimonial-max-width: 68.5rem;
+}
+
+.testimonial-section {
+  width: 100%;
+  padding: 2rem 5% 4rem;
+  background-color: #fff;
+  color: var(--testimonial-text);
+}
+
+.testimonial-section__container {
+  width: 100%;
+  max-width: var(--testimonial-max-width);
+  margin-inline: auto;
+}
+
+
+/* =========================================
+   NAVIGATION INDICATORS
+========================================= */
+
+.testimonial-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-nav__dots,
+.testimonial-nav__arrows {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-nav__dots {
+  gap: 0.5rem;
+}
+
+.testimonial-nav__dots span {
+  width: 0.5rem;
+  height: 0.5rem;
+
+  border-radius: 50%;
+  background-color: var(--testimonial-text);
+}
+
+.testimonial-nav__arrows {
+  gap: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.testimonial-nav__arrow {
+  width: 2rem;
+  height: 2rem;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background-color: #f1f2f4;
+  color: #8590a2;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+/* =========================================
+   MAIN TESTIMONIAL CARD
+========================================= */
+
+.testimonial-card {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+
+  width: 100%;
+  min-height: 29rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--testimonial-border);
+  border-radius: 0.65rem;
+
+  background-color: #fff;
+  box-shadow: var(--testimonial-shadow);
+}
+
+
+/* =========================================
+   LEFT PANEL
+========================================= */
+
+.testimonial-card__main {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2.5rem 2rem 2rem;
+}
+
+.testimonial-card__quote {
+  max-width: 42rem;
+  margin: 0;
+
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+}
+
+
+/* =========================================
+   AUTHOR INFORMATION
+========================================= */
+
+.testimonial-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.testimonial-card__author {
+  min-width: 0;
+}
+
+.testimonial-card__divider {
+  display: block;
+
+  width: 9rem;
+  height: 1px;
+
+  margin-bottom: 1rem;
+
+  background-color: var(--testimonial-text);
+}
+
+.testimonial-card__name,
+.testimonial-card__role {
+  margin: 0;
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.testimonial-card__name {
+  font-weight: 500;
+}
+
+.testimonial-card__role {
+  max-width: 24rem;
+  font-weight: 400;
+}
+
+
+/* Women Who Code Wordmark */
+
+.testimonial-card__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 1.5rem;
+
+  line-height: 1;
+  color: var(--testimonial-text);
+}
+
+.testimonial-card__brand span {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.testimonial-card__brand strong {
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+
+/* Read Story Link */
+
+.testimonial-card__link {
+  flex-shrink: 0;
+
+  margin-bottom: 0.2rem;
+
+  color: var(--testimonial-link);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.testimonial-card__link:hover {
+  text-decoration: underline;
+}
+
+.testimonial-card__link:focus-visible {
+  outline: 2px solid var(--testimonial-link);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   RIGHT PANEL: STATISTICS
+========================================= */
+
+.testimonial-card__statistics {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2.5rem 2rem;
+
+  background-color: var(--testimonial-blue);
+  color: #fff;
+}
+
+.testimonial-card__stat-heading {
+  margin: 0;
+
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
+.testimonial-card__stat-source {
+  margin: 2rem 0 0;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 64rem) {
+
+  .testimonial-section {
+    padding-inline: 4%;
+  }
+
+  .testimonial-card {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  }
+
+  .testimonial-card__main {
+    padding: 2rem 1.5rem;
+  }
+
+  .testimonial-card__statistics {
+    padding: 2rem 1.5rem;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 48rem) {
+
+  .testimonial-section {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .testimonial-nav {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .testimonial-card__main {
+    min-height: 27rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .testimonial-card__quote {
+    font-size: clamp(1.15rem, 4vw, 1.4rem);
+  }
+
+  .testimonial-card__footer {
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .testimonial-card__statistics {
+    min-height: 17rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .testimonial-card__stat-heading {
+    max-width: 28rem;
+    font-size: 1.75rem;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 30rem) {
+
+  .testimonial-section {
+    padding-inline: 1rem;
+  }
+
+  .testimonial-card__main {
+    min-height: 29rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .testimonial-card__footer {
+    gap: 1rem;
+  }
+
+  .testimonial-card__divider {
+    width: 7rem;
+  }
+
+  .testimonial-card__role {
+    font-size: 0.85rem;
+  }
+
+  .testimonial-card__link {
+    font-size: 0.85rem;
+  }
+
+  .testimonial-card__statistics {
+    min-height: 17rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .testimonial-card__stat-heading {
+    font-size: 1.6rem;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .testimonial-card__link {
+    transition: none;
+  }
+
+}
