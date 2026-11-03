@@ -1,8 +1,27 @@
+:root {
+  /* Colors */
+  --feature-text: #091e42;
+  --feature-background: #ffffff;
+  --feature-card-background: #f1f1f1;
+  --feature-preview-background: #f1f2f4;
+  --feature-accent: #00c7d9;
 
+  /* Typography */
+  --feature-font: inherit;
+
+  /* Layout */
+  --feature-max-width: 70rem;
+  --feature-column-gap: 2rem;
+
+  /* Effects */
+  --feature-card-shadow:
+    0 0.5rem 1.25rem rgba(9, 30, 66, 0.13);
+}
 /* Trello Intro Section */
 .trello-intro {
   width: 100%;
   padding: 1rem 5%;
+  color: var(--feature-text);
 }
 
 .trello-intro__content {
@@ -54,25 +73,7 @@
    FEATURE SHOWCASE
 ========================================= */
 
-:root {
-  /* Colors */
-  --feature-text: #091e42;
-  --feature-background: #ffffff;
-  --feature-card-background: #f1f1f1;
-  --feature-preview-background: #f1f2f4;
-  --feature-accent: #00c7d9;
 
-  /* Typography */
-  --feature-font: inherit;
-
-  /* Layout */
-  --feature-max-width: 70rem;
-  --feature-column-gap: 2rem;
-
-  /* Effects */
-  --feature-card-shadow:
-    0 0.5rem 1.25rem rgba(9, 30, 66, 0.13);
-}
 
 
 /* =========================================
@@ -180,7 +181,6 @@
   position: absolute;
   top: 0;
   right: 0;
-
   display: flex;
   align-items: center;
   gap: 0.45rem;
@@ -189,10 +189,8 @@
 .feature-showcase__dots span {
   width: 0.5rem;
   height: 0.5rem;
-
   display: block;
   border-radius: 50%;
-
   background-color: var(--feature-text);
 }
 
@@ -202,14 +200,12 @@
 .feature-showcase__image-wrapper {
   width: 100%;
   min-height: 20rem;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  /*align-items: center;
+  justify-content: center; */
+  flex: 0 0 100%;
   overflow: hidden;
   border-radius: 0.7rem;
-
   background-color: var(--feature-preview-background);
 }
 
@@ -218,16 +214,13 @@
 
 .feature-showcase__image {
   display: block;
-
-  width: 100%;
+  
+  min-width: 100%;
   height: auto;
   max-width: 100%;
-
   object-fit: contain;
   object-position: center;
 }
-
-
 /* =========================================
    TABLET
 ========================================= */

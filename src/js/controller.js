@@ -21,7 +21,7 @@ const init = function () {
   menuView.addHandlerRemoveMenu(menuView.closeHamburgerMenu.bind(menuView));
   videoView.addHandlerOpenVideo(videoView.openVideo.bind(videoView));
   videoView.addHandlerCloseVideo(videoView.closeVideo.bind(videoView));
-  featureView.addHandlerchangeCardInfo(featureView.changeCardInfo.bind(featureView))
+  featureView.addHandlerchangeCardInfo(featureView.changeCardInfo.bind(featureView), featureView.changeImage.bind(featureView))
   
 }
 init()
