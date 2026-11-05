@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="src/css/feature.css">
     <link rel="stylesheet" href="src/css/advancedfeatures.css">
     <link rel="stylesheet" href="src/css/testimonial.css">
+    <link rel="stylesheet" href="src/css/cta.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -579,10 +580,10 @@ keeping you at the top of the game.
 
           <aside class="testimonial-card__statistics">
 
-            <h2 class="testimonial-card__stat-heading">
+            <h3 class="testimonial-card__stat-heading">
               75% of organizations report that Trello delivers
               value to their business within 30 days.
-            </h2>
+            </h3>
 
             <p class="testimonial-card__stat-source">
               Trello TechValidate Survey
@@ -611,17 +612,17 @@ keeping you at the top of the game.
                 <span class="testimonial-card__divider"></span>
 
                 <p class="testimonial-card__name">
-                  Joey Rosenberg
+                 Sumeet Moghe
                 </p>
 
                 <p class="testimonial-card__role">
-                  Global Leadership Director at Women Who Code
+                  Product Manager at ThoughtWorks
                 </p>
 
                 <div class="testimonial-card__brand"
                      aria-label="Women Who Code">
-                  <span>WOMEN WHO</span>
-                  <strong>CODE.</strong>
+                  <span>Make</span>
+                  <strong>ThoughtWorks</strong>
                 </div>
 
               </div>
@@ -637,10 +638,9 @@ keeping you at the top of the game.
 
           <aside class="testimonial-card__statistics">
 
-            <h2 class="testimonial-card__stat-heading">
-              75% of organizations report that Trello delivers
-              value to their business within 30 days.
-            </h2>
+            <h3 class="testimonial-card__stat-heading">
+           81% of customers chose Trello for its ease of use.
+            </h3>
 
             <p class="testimonial-card__stat-source">
               Trello TechValidate Survey
@@ -657,10 +657,9 @@ keeping you at the top of the game.
           <div class="testimonial-card__main">
 
             <blockquote class="testimonial-card__quote">
-              [Trello is] great for simplifying complex processes.
-              As a manager, I can chunk [processes] down into
-              bite-sized pieces for my team and then delegate
-              that out, but still keep a bird's-eye view.
+          We used Trello to provide clarity on steps, requirements, and procedures. 
+          This was exceptional when communicating with teams that had deep
+           cultural and language differences.
             </blockquote>
 
             <div class="testimonial-card__footer">
@@ -670,17 +669,17 @@ keeping you at the top of the game.
                 <span class="testimonial-card__divider"></span>
 
                 <p class="testimonial-card__name">
-                  Joey Rosenberg
+                Jefferson Scomacao
                 </p>
 
                 <p class="testimonial-card__role">
-                  Global Leadership Director at Women Who Code
+                  Development Manager at IKEA/PTC
                 </p>
 
                 <div class="testimonial-card__brand"
                      aria-label="Women Who Code">
-                  <span>WOMEN WHO</span>
-                  <strong>CODE.</strong>
+                  <span>Reevolutionizing</span>
+                  <strong>Tech.</strong>
                 </div>
 
               </div>
@@ -696,10 +695,9 @@ keeping you at the top of the game.
 
           <aside class="testimonial-card__statistics">
 
-            <h2 class="testimonial-card__stat-heading">
-              75% of organizations report that Trello delivers
-              value to their business within 30 days.
-            </h2>
+            <h3 class="testimonial-card__stat-heading">
+          74% of customers say Trello has improved communication with their co-workers and teams.
+            </h3>
 
             <p class="testimonial-card__stat-source">
               Trello TechValidate Survey
@@ -716,7 +714,118 @@ keeping you at the top of the game.
 
 </section>
 
-  </main>
+  
+ 
+<!-- CALL TO ACTION -->
+<section class="call-to-action" aria-labelledby="call-to-action-title">
+  <div class="call-to-action__container">
+    <h2 class="call-to-action__title" id="call-to-action-title">
+      Get started with Trello today
+    </h2>
+
+    <!-- Desktop form -->
+    <form class="call-to-action__form" action="/signup" method="get">
+      <label class="visually-hidden" for="cta-email">Email address</label>
+
+      <input
+        class="call-to-action__input"
+        type="email"
+        id="cta-email"
+        name="email"
+        placeholder="Email"
+        autocomplete="email"
+        required
+      />
+
+      <button class="call-to-action__button" type="submit">
+        Sign up - it's free!
+      </button>
+    </form>
+
+    <!-- Mobile sign-up link -->
+    <a class="call-to-action__mobile-link" href="/signup">
+      Sign up - it's free!
+    </a>
+
+    <p class="call-to-action__privacy">
+      By entering my email, I acknowledge the
+      <a href="/privacy-policy">Atlassian Privacy Policy</a>
+    </p>
+  </div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__container">
+
+    <div class="footer__main">
+
+      <!-- Logo -->
+      <a class="footer__logo" href="/" aria-label="Trello home">
+        <span class="footer__logo-icon" aria-hidden="true">
+          <i data-lucide="trello"></i>
+        </span>
+        <span class="footer__logo-text">
+          <span class="footer__logo-brand">ATLASSIAN</span>
+          Trello
+        </span>
+      </a>
+
+      <!-- Footer links -->
+      <nav class="footer__navigation" aria-label="Footer navigation">
+
+        <a class="footer__link-card" href="/about">
+          <span class="footer__link-title">About Trello</span>
+          <span class="footer__link-description">
+            What's behind the boards.
+          </span>
+        </a>
+
+        <a class="footer__link-card" href="/careers">
+          <span class="footer__link-title">Jobs</span>
+          <span class="footer__link-description">
+            Learn about open roles on the Trello team.
+          </span>
+        </a>
+
+        <a class="footer__link-card" href="/platforms">
+          <span class="footer__link-title">Apps</span>
+          <span class="footer__link-description">
+            Download the Trello App for your Desktop or Mobile devices.
+          </span>
+        </a>
+
+        <a class="footer__link-card" href="/contact">
+          <span class="footer__link-title">Contact us</span>
+          <span class="footer__link-description">
+            Need anything? Get in touch and we can help.
+          </span>
+        </a>
+
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+
+      <!-- Language selector -->
+      <button class="footer__language" type="button" aria-label="Select language">
+        <i data-lucide="globe" aria-hidden="true"></i>
+        <span>Čeština</span>
+        <i data-lucide="chevron-down" aria-hidden="true"></i>
+      </button>
+
+      <!-- Legal links -->
+      <div class="footer__legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+        <span>Copyright © 2026 Atlassian</span>
+      </div>
+
+     
+    </div>
+
+  </div>
+</footer>
 
     <script type="module" src="src/js/controller.js"></script>
 </body>
