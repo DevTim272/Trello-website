@@ -58,7 +58,7 @@ const renderPage = function (path) {
   navView.render(view._markup)
 
 }
-renderPage('/solutions');
+renderPage('/resources');
 
 
 
