@@ -1,10 +1,14 @@
 
-import { createIcons, Menu, Search, Play, ArrowRight, ArrowDown, ChevronDown, X, ChevronLeft, ChevronRight } from 'lucide';
-
+import { createIcons, Menu, Search, Play, ArrowRight, ArrowDown, ChevronDown, Megaphone ,LayoutDashboard ,TerminalSquare ,X, ChevronLeft, ChevronRight, Globe, Pencil } from 'lucide';
+import navView from './navViews/navView.js';
+import navFeatureView from './navViews/featureView.js';
 import menuView from './menuView.js';
 import videoView from './videoView.js';
 import featureView from './featureView.js';
 import testimonialView from './testimonialView.js';
+import solutionsView from './navViews/solutionsView.js';
+import plansView from './navViews/plansView.js';
+import resourcesView from './navViews/resourcesView.js';
 
 createIcons({
   icons: {
@@ -16,7 +20,12 @@ createIcons({
     ChevronDown,
     X,
     ChevronRight,
-    ChevronLeft
+    ChevronLeft,
+    Globe,
+    Pencil,
+    TerminalSquare,
+    LayoutDashboard,
+    Megaphone
   }
 });
 
@@ -35,14 +44,55 @@ const controlTestimonial = function (action, position) {
   testimonialView.changeSlide(currentSlide);
   testimonialView.changeDot(currentSlide);
 };
+const routes = {
+  '/features': navFeatureView,
+   '/solutions': solutionsView,
+   '/plans': plansView,
+   '/resources': resourcesView
+
+}
+const renderPage = function (path) {
+  const view = routes[path];
+  if (!view) return
+  
+  navView.render(view._markup)
+
+}
+renderPage('/solutions');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const init = function () {
   menuView.addHandlerMenu(menuView.openHamburgerMenu.bind(menuView));
   menuView.addHandlerRemoveMenu(menuView.closeHamburgerMenu.bind(menuView));
-
   videoView.addHandlerOpenVideo(videoView.openVideo.bind(videoView));
   videoView.addHandlerCloseVideo(videoView.closeVideo.bind(videoView));
-
   featureView.addHandlerchangeCardInfo(
     featureView.changeCardInfo.bind(featureView),
     featureView.changeImage.bind(featureView)

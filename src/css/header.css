@@ -151,11 +151,9 @@ body {
 .nav__link [data-lucide="chevron-right"]{
     display: none;
 }
-.nav__link{
-  display: none;
-}
+
 .nav-btn{ 
-  display: inline-flex;
+  display: none;
   border: none;
   outline: none;
   background-color: var(--color-white);
