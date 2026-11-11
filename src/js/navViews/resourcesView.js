@@ -1,25 +1,11 @@
-class ResourcesView {
-   _markup = `
-                
-<!-- RESOURCES NAVIGATION TRIGGER -->
-<li class="header__nav-item">
-  <button
-    class="header__nav-button"
-    type="button"
-    id="resources-trigger"
-    aria-expanded="true"
-    aria-controls="resources-menu"
-  >
-    Resources
-    <i data-lucide="chevron-down" aria-hidden="true"></i>
-  </button>
-</li>
 
-<!-- RESOURCES MEGA MENU -->
+ class ResourcesView {
+   _markup = `
 <div
-  class="resources-menu"
+  class="resources-menu nav-drop-down"
   id="resources-menu"
   aria-labelledby="resources-trigger"
+  data-open="false"
 >
   <div class="resources-menu__content">
 
@@ -142,4 +128,4 @@ class ResourcesView {
 </div>
 `
 }
-export default new ResourcesView()
+export default new ResourcesView();

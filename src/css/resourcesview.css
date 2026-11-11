@@ -8,6 +8,16 @@
   --resources-menu-border: #6554c0;
   --resources-menu-height: 29.5rem;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4.5rem);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
 
 /* =========================
    MENU POSITIONING
@@ -23,6 +33,7 @@
   height: var(--resources-menu-height);
   background-color: var(--resources-menu-bg);
   box-shadow: 0 0.5rem 1.25rem rgb(9 30 66 / 15%);
+  animation: fadeIn 400ms ease;
 }
 
 .resources-menu__content {
@@ -244,4 +255,7 @@
   .resources-menu__aside-button {
     transition: none;
   }
+}
+.hidden{
+  display: none;
 }

@@ -1,25 +1,14 @@
-class SolutionsView {
-   _markup = `
-   
-<!-- SOLUTIONS NAVIGATION TRIGGER -->
-<li class="header__nav-item">
-  <button
-    class="header__nav-button"
-    type="button"
-    id="solutions-trigger"
-    aria-expanded="true"
-    aria-controls="solutions-menu"
-  >
-    Solutions
-    <i data-lucide="chevron-down" aria-hidden="true"></i>
-  </button>
-</li>
 
-<!-- SOLUTIONS MEGA MENU -->
+
+ class SolutionsView{
+   _markup = `
+
+
 <div
-  class="solutions-menu"
+  class="solutions-menu nav-drop-down"
   id="solutions-menu"
   aria-labelledby="solutions-trigger"
+  data-open="false"
 >
   <div class="solutions-menu__content">
 
@@ -208,4 +197,4 @@ class SolutionsView {
 `
 
 }
-export default new SolutionsView()
+export default new SolutionsView();

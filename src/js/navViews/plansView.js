@@ -1,7 +1,9 @@
-class plansView {
+import navView from "./navView.js"
+
+ class plansView {
    _markup = `
-<!-- PLANS MEGA MENU -->
-<div class="plans-menu plans-menu--open" aria-label="Plans menu">
+ 
+<div class="plans-menu plans-menu--open nav-drop-down" aria-label="Plans menu" data-open="false">
 
   <div class="plans-menu__content">
 

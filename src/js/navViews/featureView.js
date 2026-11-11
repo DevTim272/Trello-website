@@ -1,10 +1,9 @@
-//import navView from "./navView.js"
+import featureView from "../featureView"
 
-class NavFeatureView  {
+
+ class NavFeatureView{
     _markup = `
-    
-<!-- FEATURES MEGA MENU -->
-<div class="features-menu features-menu--open" aria-label="Features menu">
+<div class="features-menu features-menu--open nav-drop-down" aria-label="Features menu" data-open="false">
 
   <div class="features-menu__content">
 
@@ -115,4 +114,4 @@ class NavFeatureView  {
     
 
 }
-export default new NavFeatureView()
+export default new NavFeatureView();

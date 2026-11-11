@@ -8,6 +8,16 @@
   --features-menu-border: #6554c0;
   --header-height: 5rem;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4.5rem);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
 
 /* =========================
    MENU POSITIONING
@@ -25,6 +35,7 @@
   overflow-y: auto;
   background-color: var(--features-menu-bg);
   box-shadow: 0 0.5rem 1.25rem rgb(9 30 66 / 15%);
+  animation: fadeIn 400ms ease;
 }
 
 /* Hide the menu unless it has been opened */
@@ -214,4 +225,7 @@
   .features-menu__aside-button {
     transition: none;
   }
+}
+.hidden{
+  display: none;
 }

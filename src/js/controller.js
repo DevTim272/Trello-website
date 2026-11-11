@@ -44,47 +44,32 @@ const controlTestimonial = function (action, position) {
   testimonialView.changeSlide(currentSlide);
   testimonialView.changeDot(currentSlide);
 };
-const routes = {
-  '/features': navFeatureView,
-   '/solutions': solutionsView,
-   '/plans': plansView,
-   '/resources': resourcesView
-
+const navigateTo = function (url) {
+  history.pushState(null, null, url);
+  router();
 }
-const renderPage = function (path) {
-  const view = routes[path];
-  if (!view) return
+
+
+const router = function () {
+  const routes = [
+    {path:'/features', view: navFeatureView },
+    {path:'/solutions', view: solutionsView },
+    {path:'/plans', view: plansView },
+    {path:'/resources', view: resourcesView },
+
+  ]
+  const potentialMatches = routes.map(route => {
+    return {
+      route: route,
+      isOpen: location.pathname === route.path 
+    }
+  })
+  let match = potentialMatches.find(potentialMatch => potentialMatch.isOpen);
+  const view =  match.route.view;
   
-  navView.render(view._markup)
-
+  
+  navView.changeContent(view._markup)
 }
-renderPage('/resources');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -97,12 +82,11 @@ const init = function () {
     featureView.changeCardInfo.bind(featureView),
     featureView.changeImage.bind(featureView)
   );
-
   testimonialView.addHandlerNavigation(controlTestimonial);
-
-  // Set the initial slide.
   testimonialView.changeSlide(currentSlide);
   testimonialView.changeDot(currentSlide);
+  navView.addHandlerChangeContent(navigateTo)
+
 };
 
 init();
