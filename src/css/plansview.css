@@ -15,16 +15,14 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(4.5rem);
+    transform: translateY(-4.5rem);
   }
   to {
     opacity: 0.8;
     transform: translateY(0);
   }
 }
-/* =========================
-   MENU POSITIONING
-========================= */
+
 
 .plans-menu {
   position: fixed;
@@ -53,9 +51,7 @@
   margin-inline: auto;
 }
 
-/* =========================
-   MAIN PLANS PANEL
-========================= */
+
 
 .plans-menu__main {
   display: flex;
@@ -122,9 +118,7 @@
   line-height: 1.5;
 }
 
-/* =========================
-   FREE PLAN ROW
-========================= */
+
 
 .plans-menu__free-plan {
   display: flex;
@@ -178,9 +172,6 @@
   color: var(--plans-menu-text);
 }
 
-/* =========================
-   COMPARE PLANS PANEL
-========================= */
 
 .plans-menu__aside {
   min-width: 0;
@@ -208,9 +199,6 @@
   color: var(--plans-menu-bg);
 }
 
-/* =========================
-   INTERACTION & ACCESSIBILITY
-========================= */
 
 .plans-menu__item:hover .plans-menu__item-heading,
 .plans-menu__item:focus-visible .plans-menu__item-heading {
@@ -224,9 +212,7 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-========================= */
+
 
 @media (max-width: 800px) {
   .plans-menu__content {
@@ -243,9 +229,6 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
   .plans-menu__content {

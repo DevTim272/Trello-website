@@ -1,30 +1,27 @@
 :root {
-  /* Colors */
+  
   --color-white: #ffffff;
   --color-navy: #172b4d;
   --color-hover: #f1f2f4;
   --sign-link: #0052CC;
   --color-pale: #F4F5F7;
 
-  /* Typography */
   --font-primary: "Victoria", Arial, sans-serif;
   --font-size-nav: 1.2rem;
   --font-weight-nav: 500;
   --line-height-nav: 1.5rem;
   --letter-spacing-nav: normal;
 
-  /* Spacing */
+  
   --header-padding: 1.25rem 2rem;
   --nav-gap: 1.5rem;
   --header-gap: 2.5rem;
 
-  /* Other */
+ 
   --transition: 0.2s ease;
 }
 
-/* ==============================
-   RESET
-============================== */
+
 
 * {
   margin: 0;
@@ -64,7 +61,7 @@ main{
 
 
 
-/* Mobile */
+
 @media (max-width: 900px) {
   main{
     position: relative;
@@ -76,7 +73,7 @@ main{
   }
 }
 
-/* Hero Section */
+
 .hero-section {
   width: 100%;
   padding: 4rem 5%;
@@ -148,7 +145,7 @@ main{
   background-color: #388bff;
 }
 
-/* Privacy Notice */
+
 .privacy-notice {
   font-size: 0.95rem;
   line-height: 1.5;
@@ -212,7 +209,7 @@ main{
 
 
 
-/* Watch Video */
+
 .video-btn {
   display: inline-flex;
   align-items: center;
@@ -240,7 +237,7 @@ main{
   fill: currentColor;
 }
 
-/* Right Column */
+
 .hero-image {
   width: 100%;
   background-color: #fff;
@@ -261,7 +258,7 @@ main{
   max-height: 25rem;
 }
 
-/* Video */
+
 .video-modal video {
   display: block;
   width: 100%;
@@ -270,7 +267,7 @@ main{
   border-radius: 0.5rem;
 }
 
-/* Close Button */
+
 .video-close {
   position: absolute;
   top: -2.75rem;
@@ -301,11 +298,10 @@ main{
   background-color: #e9e9e9;
 }
 
-/* Utility */
 
 
 
-/* Video Overlay */
+
 .video-overlay {
   position: fixed;
   inset: 0;
@@ -328,7 +324,7 @@ main{
   }
 }
 
-/* Extremely Large Screens */
+
 @media (min-width: 120rem) {
   .video-modal {
     max-height: 37.5rem;

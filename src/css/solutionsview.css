@@ -10,16 +10,14 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(4.5rem);
+    transform: translateY(-4.5rem);
   }
   to {
     opacity: 0.8;
     transform: translateY(0);
   }
 }
-/* =========================
-   MENU POSITIONING
-========================= */
+
 
 .solutions-menu {
   position: fixed;
@@ -44,9 +42,7 @@
   margin-inline: auto;
 }
 
-/* =========================
-   MAIN SOLUTIONS PANEL
-========================= */
+
 
 .solutions-menu__main {
   min-width: 0;
@@ -61,7 +57,7 @@
   line-height: 1.4;
 }
 
-/* Reset native list styles */
+
 
 .solutions-menu__grid,
 .solutions-menu__use-cases {
@@ -82,9 +78,6 @@
   min-width: 0;
 }
 
-/* =========================
-   SOLUTION LINKS
-========================= */
 
 .solutions-menu__item {
   display: flex;
@@ -122,9 +115,7 @@
   line-height: 1.5;
 }
 
-/* =========================
-   SEE ALL LINKS
-========================= */
+
 
 .solutions-menu__all-link {
   display: inline-flex;
@@ -149,9 +140,7 @@
   transform: translateX(0.25rem);
 }
 
-/* =========================
-   PRODUCT IN ACTION SIDEBAR
-========================= */
+
 
 .solutions-menu__aside {
   min-width: 0;
@@ -198,9 +187,6 @@
   margin-top: 2.5rem;
 }
 
-/* =========================
-   HOVER AND KEYBOARD FOCUS
-========================= */
 
 .solutions-menu__item:hover .solutions-menu__item-heading,
 .solutions-menu__item:focus-visible .solutions-menu__item-heading,
@@ -216,9 +202,7 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-========================= */
+
 
 @media (max-width: 800px) {
   .solutions-menu__content {
@@ -243,9 +227,7 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+
 
 @media (max-width: 600px) {
   .solutions-menu__content {
@@ -282,9 +264,6 @@
   }
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .solutions-menu__all-link svg {

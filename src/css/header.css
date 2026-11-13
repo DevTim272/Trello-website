@@ -1,41 +1,24 @@
 
-/* ==============================
-   FONT
-============================== */
-
-/* Place your Victoria font file in the fonts folder. */
-
-
-/* ==============================
-   VARIABLES
-============================== */
-
 :root {
-  /* Colors */
+  
   --color-white: #ffffff;
   --color-navy: #172b4d;
   --color-hover: #f1f2f4;
   --sign-link: #0052CC;
 
-  /* Typography */
   --font-primary: "Victoria", Arial, sans-serif;
   --font-size-nav: 1.2rem;
   --font-weight-nav: 500;
   --line-height-nav: 1.5rem;
-  --letter-spacing-nav: normal;
 
-  /* Spacing */
+  --letter-spacing-nav: normal;
   --header-padding: 1.25rem 2rem;
   --nav-gap: 1.5rem;
   --header-gap: 2.5rem;
 
-  /* Other */
   --transition: 0.2s ease;
 }
 
-/* ==============================
-   RESET
-============================== */
 
 * {
   margin: 0;
@@ -47,9 +30,6 @@ body {
   font-family: var(--font-primary);
 }
 
-/* ==============================
-   HEADER
-============================== */
 
 .header {
   background-color: var(--color-white);
@@ -70,8 +50,6 @@ body {
   background-color: var(--color-white);
 }
 
-/* Accessibility */
-
 .skip-link {
   position: absolute;
   width: 1px;
@@ -82,7 +60,6 @@ body {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
 .skip-link:focus {
   position: fixed;
   top: 1rem;
@@ -97,8 +74,6 @@ body {
   color: var(--color-white);
 }
 
-/* Logo */
-
 .logo {
   color: var(--color-navy);
   font-size: 1.5rem;
@@ -106,18 +81,11 @@ body {
   text-decoration: none;
   flex-shrink: 0;
 }
-
-/* Navigation wrapper */
-
 .header__links {
   display: flex;
   align-items: center;
   flex: 1;
- 
 }
-
-/* Navigation */
-
 .nav__list {
   display: flex;
   align-items: center;
@@ -151,15 +119,9 @@ body {
 .nav__link [data-lucide="chevron-right"]{
     display: none;
 }
-
-.nav-btn{ 
+.nav__link--mobile{
   display: none;
-  border: none;
-  outline: none;
-  background-color: var(--color-white);
 }
-/* Signup */
-
 .signup-link {
   margin-left: auto;
   color: var(--color-navy);
@@ -176,8 +138,6 @@ body {
 .signup-link:last-of-type{
     display: none;
 }
-/* Hamburger */
-
 .menu-toggle {
   display: none;
   border: 0;
@@ -185,14 +145,10 @@ body {
   color: var(--color-navy);
   cursor: pointer;
 }
-
 .menu-toggle svg {
   width: 1.75rem;
   height: 1.75rem;
 }
-
-/* Keyboard accessibility */
-
 .nav__link:focus-visible,
 .signup-link:focus-visible,
 .menu-toggle:focus-visible,
@@ -218,11 +174,8 @@ body {
   max-height: 48px;
   object-fit: contain;
 }
-/* ==============================
-   RESPONSIVE DESIGN
-============================== */
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   :root {
     --header-padding: 1rem 1.25rem;
   }
@@ -276,11 +229,8 @@ body {
   }
 
   .nav__link {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid grey;
-    padding-bottom: 2rem;
+    display: none;
+    
   }
   .nav__link [data-lucide="chevron-down"]{
     display: none;
@@ -288,6 +238,14 @@ body {
   .nav__link [data-lucide="chevron-right"]{
     display: inline;
   }
+  .nav__link{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding-bottom: 2rem;
+  }
+  .nav__link--mobile{ display: none;}
  .nav-btn{
   display: none;
  }
@@ -316,6 +274,9 @@ body {
  .signup-link:last-of-type a{
     color: var(--color-navy);
  } 
+   #hidden{
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .logo img {

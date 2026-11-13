@@ -11,7 +11,7 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(4.5rem);
+    transform: translateY(-4.5rem);
   }
   to {
     opacity: 0.8;
@@ -19,9 +19,6 @@
   }
 }
 
-/* =========================
-   MENU POSITIONING
-========================= */
 
 .features-menu {
   position: fixed;
@@ -38,7 +35,7 @@
   animation: fadeIn 400ms ease;
 }
 
-/* Hide the menu unless it has been opened */
+
 .features-menu:not(.features-menu--open) {
   display: none;
 }
@@ -51,9 +48,6 @@
   margin-inline: auto;
 }
 
-/* =========================
-   MAIN FEATURES PANEL
-========================= */
 
 .features-menu__main {
   min-width: 0;
@@ -110,10 +104,6 @@
   line-height: 1.5;
 }
 
-/* =========================
-   MEET TRELLO PANEL
-========================= */
-
 .features-menu__aside {
   min-width: 0;
   padding: clamp(2.5rem, 4vw, 3.5rem) clamp(1.25rem, 2.5vw, 2rem);
@@ -157,9 +147,7 @@
   color: var(--features-menu-bg);
 }
 
-/* =========================
-   INTERACTION & ACCESSIBILITY
-========================= */
+
 
 .features-menu__item:hover .features-menu__item-heading,
 .features-menu__item:focus-visible .features-menu__item-heading {
@@ -172,9 +160,6 @@
   outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 800px) {
   .features-menu__content {
@@ -190,9 +175,6 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 600px) {
   .features-menu {

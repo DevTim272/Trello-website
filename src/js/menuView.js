@@ -1,7 +1,10 @@
+import { data } from "browserslist";
+
 class MenuView {
    _openBtn = document.querySelector('.menu-toggle');
    _parentEl = document.querySelector('.header__links');
    _closeBtn = document.querySelector('.menu-remove');
+
    openHamburgerMenu(){
     this._parentEl.classList.add('is-open');
      this._openBtn.classList.add('hidden');
@@ -16,7 +19,11 @@ class MenuView {
     this._openBtn.addEventListener('click', handler)
    }
     addHandlerRemoveMenu(handler){
-    this._closeBtn.addEventListener('click', handler)
+     
+    if (this._closeBtn.dataset.expanded === 'false') this._closeBtn.addEventListener('click', handler)
+    else console.log('bwess');
+    
+
    }
 }
 export default new MenuView();

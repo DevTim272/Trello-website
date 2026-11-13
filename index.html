@@ -15,16 +15,17 @@
     <link rel="stylesheet" href="src/css/resourcesview.css">
     <link rel="stylesheet" href="src/css/navdisplay.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./src/img/Favicon.jpeg" sizes="any">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Trello</title>
 </head>
 <body>
    <header class="header">
     <div class="header__container">
 
       <!-- Accessibility: Skip navigation -->
-      <a href="#main-content" class="skip-link">
+      <a href="#main-content" class="skip-link"> 
         Skip to content
       </a>
 
@@ -50,7 +51,6 @@
                 <i data-lucide="chevron-down" aria-hidden="true"></i>
                  <i data-lucide="chevron-right" aria-hidden="true"></i>
               </a>
-            
             </li>
 
             <li>
@@ -59,7 +59,7 @@
                 <i data-lucide="chevron-down" aria-hidden="true"></i>
                  <i data-lucide="chevron-right" aria-hidden="true"></i>
               </a>
-              
+               
             </li>
 
             <li>
@@ -86,6 +86,7 @@
                 <i data-lucide="chevron-down" aria-hidden="true"></i>
                 <i data-lucide="chevron-right" aria-hidden="true"></i>
               </a>
+             
               
             </li>
 
@@ -117,6 +118,7 @@
         aria-label="Close navigation menu"
         aria-controls="primary-navigation"
         aria-expanded="true"
+        data-expanded="false"
       >
         <i data-lucide="x" aria-hidden="true"></i>
       </button>
@@ -126,9 +128,9 @@
   </header>
   
   <main>
-    <div class="drop-down"></div>
+    <div class="drop-down hidden"></div>
     <div class="first-child">
-    <section class="hero-announcement">
+    <section class="hero-announcement" id="main-content">
   <p>
     Accelerate your team's work with AI features, now available for all
     Premium and Enterprise.

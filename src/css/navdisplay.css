@@ -3,7 +3,7 @@
     top: 4.5rem;
     left: 0;
     right: 0;
-    height: 500px;
-   
+    height: auto;
+    padding-bottom: 200rem;
     z-index: 1000000000000000000000;
 }
